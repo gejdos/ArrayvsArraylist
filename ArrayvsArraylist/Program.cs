@@ -12,44 +12,62 @@ namespace ArrayvsArraylist
     {
         static void Main(string[] args)
         {
-            const int miliarda = 100000000;
-            int[] miliardaPole = new int[miliarda];
-            ArrayList miliardaArraylist = new ArrayList();
+            //const int miliarda = 100000000;
+            //int[] miliardaPole = new int[miliarda];
+            //ArrayList miliardaArraylist = new ArrayList();
 
-            Random r = new Random();
-            Stopwatch stopky = new Stopwatch();
+            //Random r = new Random();
+            //Stopwatch stopky = new Stopwatch();
 
-            stopky.Start();
-            for (int i = 0; i < miliarda; i++)
+            //stopky.Start();
+            //for (int i = 0; i < miliarda; i++)
+            //{
+            //    miliardaPole[i] = r.Next();
+            //}
+            //stopky.Stop();
+            //Console.WriteLine("naplnenie pola {0}", stopky.Elapsed);
+
+
+            //stopky.Restart();
+            //for (int i = 0; i < miliarda; i++)
+            //{
+            //    miliardaArraylist.Add(r.Next());
+            //}
+            //stopky.Stop();
+            //Console.WriteLine("naplnenie arraylistu {0}", stopky.Elapsed);
+
+            //stopky.Restart();
+            //Array.Sort(miliardaPole);
+            //stopky.Stop();
+
+            //Console.WriteLine("Sort array {0}", stopky.Elapsed);
+
+            //stopky.Restart();
+            //miliardaArraylist.Sort();
+            //stopky.Stop();
+
+            //Console.WriteLine("Sort arraylist {0}", stopky.Elapsed);
+
+
+            string vstup = "3";
+
+            try
             {
-                miliardaPole[i] = r.Next();
+                //int cislo = int.Parse(vstup);
+                int nula = 0;
+                int cislo = 10 / nula;
+                Console.WriteLine("OK");
             }
-            stopky.Stop();
-            Console.WriteLine("naplnenie pola {0}", stopky.Elapsed);
-
-
-            stopky.Restart();
-            for (int i = 0; i < miliarda; i++)
+            catch (Exception exception)
             {
-                miliardaArraylist.Add(r.Next());
+                Console.WriteLine(exception.Message);
             }
-            stopky.Stop();
-            Console.WriteLine("naplnenie arraylistu {0}", stopky.Elapsed);
-
-            stopky.Restart();
-            Array.Sort(miliardaPole);
-            stopky.Stop();
-
-            Console.WriteLine("Sort array {0}", stopky.Elapsed);
-
-            stopky.Restart();
-            miliardaArraylist.Sort();
-            stopky.Stop();
-
-            Console.WriteLine("Sort arraylist {0}", stopky.Elapsed);
 
 
             Console.ReadKey();
+
+
+
         }
     }
 }
