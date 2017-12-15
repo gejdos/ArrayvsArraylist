@@ -58,11 +58,20 @@ namespace ArrayvsArraylist
                 int cislo = 10 / nula;
                 Console.WriteLine("OK");
             }
+            catch (System.IO.IOException exception)
+            {
+                //konkretna vynimka
+                throw exception;
+            }
             catch (Exception exception)
             {
+                //vseobecna vynimka
                 Console.WriteLine(exception.Message);
             }
-
+            finally
+            {
+                // vzdy sa vykona
+            }
 
             Console.ReadKey();
 
