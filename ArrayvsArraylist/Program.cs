@@ -12,7 +12,7 @@ namespace ArrayvsArraylist
     {
         static void Main(string[] args)
         {
-            const int miliarda = 1000000000;
+            const int miliarda = 100000000;
             int[] miliardaPole = new int[miliarda];
             ArrayList miliardaArraylist = new ArrayList();
 
@@ -20,17 +20,23 @@ namespace ArrayvsArraylist
             Stopwatch stopky = new Stopwatch();
 
             stopky.Start();
-            for (int i = 0; i < miliardaPole.Length; i++)
+            for (int i = 0; i < miliarda; i++)
             {
                 miliardaPole[i] = r.Next();
             }
+            stopky.Stop();
+            Console.WriteLine("naplnenie pola {0}", stopky.Elapsed);
 
 
-            for (int i = 0; i < miliardaArraylist.Count; i++)
+            stopky.Restart();
+            for (int i = 0; i < miliarda; i++)
             {
                 miliardaArraylist.Add(r.Next());
             }
+            stopky.Stop();
+            Console.WriteLine("naplnenie arraylistu {0}", stopky.Elapsed);
 
+            Console.ReadKey();
         }
     }
 }
